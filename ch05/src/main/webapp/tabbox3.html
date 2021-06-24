@@ -57,30 +57,40 @@ ul, ol{
 
 <script type="text/javascript">
 	//DOM Level 1 Event 처리 : elemenet의 event attribute 사용하는 방식
-	// 1) HTML Tag에 바로 적용하기
+	// 2) Javascript code(DOM API)
 	
-	var liSelected = null;
-	
-	var onTabClicked = function(li) {
-		li.className = "selected"; //selected;
-		if (liSelected != null) {
-			liSelected.className = ""; // unselected;
-		}
-		liSelected = li;
+	var onTabClicked = function() {
+		//unselected
+		var lisSelected = document.getElementsByClassName("selected");
+		(lisSelected.length == 1) && (lisSelected[0].className = "");
 		
+		//selected
+		this.className = "selected";
 	};
 	
+	
+	window.onload = function() {
+		var divTabBox = document.getElementsByClassName("tab-box")[0];
+		console.log(divTabBox.childNodes);
+		
+		var ul = divTabBox.childNodes[1];
+		var liTabs = ul.getElementsByTagName("li");
+		
+		for (var i = 0; i < liTabs.length; i++) {
+			liTabs[i].addEventListener("click", onTabClicked);
+		}
+	}
 </script>
 
 </head>
 <body>
 	<div class="tab-box">
 		<ul>
-	        <li onclick="onTabClicked(this);" class="">메뉴 5</li>
- 			<li onclick="onTabClicked(this);" class="">메뉴 4</li>
-	        <li onclick="onTabClicked(this);" class="">메뉴 3</li>
-	        <li onclick="onTabClicked(this);" class="">메뉴 2</li>
- 	        <li onclick="onTabClicked(this);" class="">메뉴 1</li>
+	        <li>메뉴 5</li>
+	        <li>메뉴 4</li>
+	        <li>메뉴 3</li>
+	        <li>메뉴 2</li>
+	        <li>메뉴 1</li>
 	    </ul>
 	    <div>
 	    	탭뷰입니다.
