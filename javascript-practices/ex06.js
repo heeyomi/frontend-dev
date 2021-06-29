@@ -1,4 +1,5 @@
 /*
+    자바스크립트 객체 1 - object 타입
     1. 자바스크립트 객체는 function 타입과 object 타입 2가지가 잇다.
     2. 보통 function 타입 객체는 함수라고 부른다.
     3. 따라서, 자바스크립트 객체라 부르는 것은 object 타입의 객체를 가리킨다.
@@ -8,7 +9,7 @@
     생성 방법 1)
     생성자 함수를 사용하는 방법
     Number(), Boolean(), String(), Object(), Array() .... 내장 객체(생성자 함수)
-    그리고 
+    그리고 사용자 정의 생성자 함수
 */
 var o1 = new Object();
 o1.name = "둘리";
@@ -35,7 +36,6 @@ console.log(o2);
 
 /*
     생성 방법 3
-    {} listeral 사용하는 방법
     (J)ave(S)cript (O)bject (N)otation
 */
 
@@ -50,7 +50,7 @@ o3 = {
 
 console.log(o3);
 
-/* XmlHttpRequest 호스트 객체(부라우저)사용해서 통신(AJAX)을 한다.*/
+/* XmlHttpRequest 호스트 객체(브라우저)사용해서 통신(AJAX)을 한다.*/
 var reponse = '{name: "둘리", age: 10, email: "dooly@gmail.com"}';
 var userVo = eval("(" + reponse + ")");
 console.log(userVo.name + ":" + userVo.email);

@@ -24,13 +24,14 @@ console.log("1"+1);
 console.log("=========================");
 /* === : identity
 1. 타입의 동일성
-2. 값의 동일성 똔든 객체의 동일성
+2. 값의 동일성 또는 객체의 동일성
 3. 형변환 x
 */
 console.log("2" === 2);
 console.log(true === 1);
 console.log(2 === 4);
 console.log(new Number(4) === new Number(4));
+
 console.log("=========================");
 // 추천
 // 엄격하게 형 변환을 해서 두 피연산자의 타입을 맞춰준다.

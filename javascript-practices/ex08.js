@@ -22,7 +22,7 @@ console.log("=========== 객체의 확장 ==========");
 o.another = {
     name : "마이콜",
     age : 30
-}    
+};
 
 console.log(o);
 

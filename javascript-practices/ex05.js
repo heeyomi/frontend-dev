@@ -1,5 +1,5 @@
 /*
-구문(statement) : 자바스크립트의 실행 단위
+구문(statement)
 1. 자바스크립트의 실행 단위
 2. 구성요소
     값, 연산자  : 표현식
@@ -7,14 +7,14 @@
     예약어      : if, else, for, ...
 3. 구문의 예
     if, if~else, if~elseif~else
-    while, do-while
+    while, do-while, for
     switch
     for~in
     with(deprecated)
     변수 정의(함수 정의)
 4. 공백 : 토큰 구분, 무시
 5. 세미콜론 :
-    원칙적으로 구문을 분리하는 역할
+   원칙적으로 구문을 분리하는 역할
 */
 
 // 표현식 var s = "hello World"를 

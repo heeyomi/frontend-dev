@@ -13,7 +13,7 @@ a2[0] = 0;
 a2[10] = 0;
 a2[11] = 11;
 a2[12] = 12;
-console.log(a2[0], a2[1], a2.length);
+console.log(a2[0], a2[1], a2.length); //배열 요소에 값을 지정하지 않으면 undefined
 
 // 초기값을 지정할 수 있다.
 var a3 = new Array(0, 1, 2, 3, 4);
@@ -32,15 +32,14 @@ for (prop in a4) {
     console.log("prop:" + prop +":" + typeof(prop));
 }
 
-a4.forEach(function(e) {
-    console.log("e : " + e);
-});
-
 o4 = {};
-o4["0"] = 0;
-o4["1"] = 1  ;
+o4[0] = 0;
+o4["1"] = 1;
 o4["name"] = "마이콜";
-console.log(o4["0"], o4[0], o4["name"], o4.length);
+console.log(o4["0"], o4[1], o4["name"], o4.length);
+for(prop in o4){
+	console.log("prop:" + prop + ":" + o4[prop]); 
+}
 
 // 리터럴
 console.log("========== 리터럴 ==========");

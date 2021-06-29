@@ -1,28 +1,41 @@
 /*
-변수와 데이터 타입
-[기본타입(primitive type), 유사객체]
-1. number
-2. boolean
-3. string
-4. undefined
-[객체1] - object type 
-1. new 생성자함수() 사용해서 생성,
-    Number()  -> object type 객체 생성
-    Boolean() -> object type 객체 생성
-    String()  -> object type 객체 생성
-    Object()  -> object type 객체 생성
-    Array()   -> object type 객체 생성
-2. null
-3. [](배열 리터럴)
-4. {}(객체 리터럴, JSON)
- 
-[객체2] - function type 
-1. new 생성자함수() 사용해서 생성,
-   Function() -> function type 객체가 생성
-2. funtion(....) { ..... } ( 함수 리터럴)
+    변수와 데이터 타입
+
+    [기본타입(primitive type), 유사객체]
+    1. number
+    2. boolean
+    3. string
+    4. undefined
+
+    [객체1] - object type 
+    1. new 생성자함수() 사용해서 생성,
+        Number()  -> object type 객체 생성
+        Boolean() -> object type 객체 생성
+        String()  -> object type 객체 생성
+        Object()  -> object type 객체 생성
+        Array()   -> object type 객체 생성
+    2. null
+    3. [](배열 리터럴)
+    4. {}(객체 리터럴, JSON)
+    
+    [객체2] - function type 
+    1. new 생성자함수() 사용해서 생성,
+    Function() -> function type 객체가 생성
+    2. funtion(....) { ..... } ( 함수 리터럴)
 */
 
 /*
+    자바스크립트의 객체를 구분하는 또 다른 방법
+    1. 내장(Built-In, Native) 객체
+       자바스크립트 엔진 안에 미리 내장되어 있는 객체
+       Number, Boolean, Date, RegExp .. 생성자 함수 객체
+       parseInt, setTimeout, setInterval과 같은 일반 함수 객체
+       window 객체(브라우저에서만 전역 객체)
+    2. 호스트 객체
+       자바스크립트 엔진이 임베디드된 호스트의 객체(자바스크립트 접근 가능)
+       브라우저만 해당(document, location, XmlHttpRequest, ...)
+    3. 사용자 객체
+       자바스크립트 코드가 엔진에서 실행되면서 생성되는 객체들
 */
 
 console.log("==== 원시 타입 =====================")

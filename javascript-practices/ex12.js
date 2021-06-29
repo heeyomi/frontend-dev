@@ -32,9 +32,12 @@ console.log(a);
 a.insert(2, ['a', 'b', 'c']);
 console.log(a); //결과 [1, 2, ['a', 'b', 'c'], 4]
 
-var f = function () {
-    console.log(this);
+var f = function (param) {
+    console.log(this + ":" + param);
 }
 
-o = {};
-f.call(o);
+//f();
+
+o = {name : "me!"};
+f.call(o, "dooly@gmail.com");
+f.apply(o);
