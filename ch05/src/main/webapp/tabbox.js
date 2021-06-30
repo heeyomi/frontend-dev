@@ -7,18 +7,7 @@ var tabBox = {
 		liTabs[i].addEventListener("click", onTabClicked);
 	}
 };
-	
-var onTabClicked = function() {
-	//unselected
-	var lisSelected = document.getElementsByClassName("selected");
-	(lisSelected.length == 1) && (lisSelected[0].className = "");
-		
-	//selected
-	this.className = "selected";
-};
-	
-	
-window.onload = function() {
+window.addEventListener(load, function() {
 	var divTabBox = document.getElementsByClassName("tab-box")[0];
 	console.log(divTabBox.childNodes);
 		
@@ -28,4 +17,10 @@ window.onload = function() {
 	for (var i = 0; i < liTabs.length; i++) {
 		liTabs[i].addEventListener("click", onTabClicked);
 	}
-}
+});
+
+console.log("=== global ===");
+window.name = "둘리";
+console.log(name, window.name);
+var email = "dooly@gmail.com";
+console.log(email, window.email);
