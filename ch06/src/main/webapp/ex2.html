@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here</title>
+<script>
+// 팜업창
+const child = window.open('', '', 'width=200, height=100')
+
+// 현재 모니터의 width 및 height 구하기
+let widthScreen = screen.width;
+let heightScreen = screen.height;
+
+console.log(widthScreen + ":" + heightScreen);
+
+setTimeout(() => {
+	child.moveTo(0, 0);
+	child.resizeTo(widthScreen, heightScreen);
+	
+	setInterval(() => {
+		// 1초마다 가운데를 기준으로 사이즈 줄이기
+		child.resizeBy(-20, -20);
+		child.moveBy(10, 10);
+	}, 1000);
+}, 2000);
+
+</script>
+</head>
+<body>
+	<h1>BOM(Browser OBject Model) - window, screen, location, navigator</h1>
+	<h2>2. screen 객체</h2>
+</body>
+</html>
