@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+window.addEventListener("load", function() {
+	const imgElement = document.createElement("img");
+	
+	// (표준 + 비표준) 속성
+	imgElement.src = "https://cdn.imweb.me/upload/S202002259d2c4f16c33cd/e7d400f088d0e.jpg";
+	imgElement.style.width = "400px";
+	imgElement.alt = "춘식이";
+	imgElement.title = "춘식이";
+	imgElement["data-no"] = 10;
+	
+	setTimeout(() => {
+		document.body.appendChild(imgElement);
+	}, 3000);
+});
+</script>
+</head>
+<body>
+<h1>HTML Element(DOM Tree Node) 속성 조작하기</h1>
+</body>
+</html>
