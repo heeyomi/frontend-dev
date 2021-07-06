@@ -9,13 +9,13 @@
 <script>
 $(function() {
 	$("button").click(function () {
-		$("p").load("${pageContext.request.contextPath}/api/text");
+		$("p").load("${pageContext.request.contextPath}/api/html p");
 	});
 });
 </script>
 </head>
 <body>
-	<h1>AJAX Test - Text Format Data</h1>
+	<h1>AJAX Test - HTML Format Message(Data)</h1>
 	<button>변경</button>
 	<p>변경 전</p>
 </body>
