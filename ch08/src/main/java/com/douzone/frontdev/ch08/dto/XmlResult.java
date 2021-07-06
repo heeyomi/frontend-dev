@@ -30,7 +30,7 @@ public class XmlResult {
 		this.result = result;
 	}
 
-	public Object getData() {
+	public GuestbookVo getData() {
 		return data;
 	}
 

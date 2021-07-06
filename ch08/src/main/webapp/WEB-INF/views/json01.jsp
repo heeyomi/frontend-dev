@@ -10,14 +10,16 @@
 $(function() {
 	$("button").click(function () {
 		$.ajax({
-			url: "${pageContext.request.contextPath}/api/xml",
+			url: "${pageContext.request.contextPath}/api/json",
+			async: true,
 			dataType: "json",
+			type:"get",
+			data:"",
 			success: function(response) {
 				let html = "";
 				html += ("<h4>" + response.data.no+ "</h4>");
 				html += ("<h5>" + response.data.name + "</h5>");
 				html += ("<p>" + response.data.message + "</p>");
-				
 				$("#data").append(html);
 			}
 		});

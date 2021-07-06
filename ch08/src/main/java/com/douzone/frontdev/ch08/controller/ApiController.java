@@ -27,7 +27,7 @@ public class ApiController {
 	@ResponseBody
 	@RequestMapping("/xml")
 	public Object xml() {
-		GuestbookVo vo = new GuestbookVo();
+		XmlResult.GuestbookVo vo = new XmlResult.GuestbookVo();
 		vo.setNo(1L);
 		vo.setName("둘리");
 		vo.setMessage("호이~");

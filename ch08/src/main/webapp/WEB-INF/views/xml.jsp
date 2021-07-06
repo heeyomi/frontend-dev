@@ -14,18 +14,15 @@ $(function() {
 			dataType: "xml",
 			success: function(response) {
 				const $data = $("data", response);
-				const $no = $("no", response).text;
-				const $name = $("name", response);
-				const $message = $("message", response);
-				
-				//const no = $no.text();
-				const name = $name.text();
-				const message = $message.text();
+				const $no = $("no", $data);
+				const $name = $("name", $data);
+				const $message = $("message", $data);
 				
 				let html = "";
-				html += ("<h4>" + $no + "</h4>");
-				html += ("<h5>" + name + "</h5>");
-				html += ("<p>" + message + "</p>");
+				html += ("<h4>" + $no.text() + "</h4>");
+				html += ("<h5>" + $name.text() + "</h5>");
+				html += ("<p>" + $message.text() + "</p>");
+				
 				
 				$("#data").append(html);
 			}
