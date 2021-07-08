@@ -9,6 +9,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script src="${pageContext.request.contextPath }/jquery/jquery-3.6.0.js" type="text/javascript"></script>
+<script src="${pageContext.request.contextPath }/ejs/ejs.js"></script>
 <script>
 var render = function(vo, mode){
 	html =
@@ -27,6 +28,9 @@ var render = function(vo, mode){
 	$("#list-guestbook")[mode ? "append" : "prepend"](html);
 }
 
+var listEJS = new EJS({
+	url : "${pageContext.request.contextPath }/ejs/list-template.ejs"
+});
 
 	var fetch = function() {
 		$.ajax({
@@ -34,9 +38,10 @@ var render = function(vo, mode){
 			dataType : "json",
 			type : "get",
 			success : function(response) {
-				response.data.forEach(function(vo) {
-					render(vo, true);
-				});
+				// response.data.forEach(function(vo) {
+				//	 render(vo, true);
+				// });
+				listEJS.render(response.data);
 			}
 		});
 	}
