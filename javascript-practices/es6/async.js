@@ -23,13 +23,15 @@ const request02 = function (url) { //request02 : db.query, $.ajax Promise 객체
     });
 }
 
-// const fetch = async function(url) { //model.findAll, model.insert ...
-//     try{
-//         console.log("fetch [" + url + "]");
-//         const response = await request02(url);
-//         return response;
-//     }
-// }
+const fetch = async function(url) { //model.findAll, model.insert ...
+    try{
+        console.log("fetch [" + url + "]");
+        const response = await request02(url);
+        return response;
+    } catch(err) {
+        console.log(err);
+    }
+}
 
 // request01("http://www.heeyomi.com/api", function (response) {
 //     console.log(response);
