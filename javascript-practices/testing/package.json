@@ -1,0 +1,15 @@
+{
+  "name": "testing",
+  "version": "1.0.0",
+  "description": "1. 자바스크립트 단위 테스트 도구는 20여가지 넘게 있다.\r 2. Java : JUnit == JaScript : JSUnit(개발 중지, 2009년)\r 3. JSUnit 프로젝트 ==> Jasmine(2010년~현재)\r   - 자체 assertion을 가지고 있다.\r   - BDD 기반의 표준 테스팅에 맞는 문법을 작성할 수 있다.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^9.0.2"
+  }
+}
