@@ -1,6 +1,6 @@
 
 const ex01 = function (param, callback) {
-    // 비동기 코드
+    // callback 함수를 리턴하는 비동기 코드
     // ex) 파일 시스템 접근, 네트워크 통신, SQL to DB, setTimeout
     setTimeout(function () {
         if (param == 'param-data') {
@@ -8,25 +8,29 @@ const ex01 = function (param, callback) {
         } else {
             callback(new Error('fail'));
         }
-    }, 2000);
+    }, 1000);
 }
-
-// test01
-ex01("param-data", function(error, res) {
-    if (error) {
-        console.error(error);
-    } else{
-        console.log(res);
-    }
-});
-
-// test02
-ex01("param-error", function(error, res) {
-    if (error) {
-        console.error(error.message);
-    } else{
-        console.log(res);
-    }
-});
-
-console.log("waits...");
+if (require.main == module) {
+    // test01
+    ex01("param-data", function(error, res) {
+        if (error) {
+            console.error(error);
+        } else{
+            console.log(res);
+        }
+    });
+    
+    // test02
+    ex01("param-error", function(error, res) {
+        if (error) {
+            console.error(error.message);
+        } else{
+            console.log(res);
+        }
+    });
+    
+    console.log("waits...");
+    
+} else{
+    module.exports = ex01;
+}
